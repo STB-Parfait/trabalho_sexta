@@ -112,7 +112,7 @@ const checkScrollable = () => {
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3333/courses');
+    const response = await axios.get('http://localhost:3000/courses');
     courses.value = response.data;
     await nextTick();
     checkScrollable();

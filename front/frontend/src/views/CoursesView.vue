@@ -46,7 +46,7 @@ const enrollmentStatus = ref({}); // Objeto para controlar o estado de cada bot�
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3333/courses');
+    const response = await axios.get('http://localhost:3000/courses');
     courses.value = response.data;
   } catch (err) {
     error.value = 'Não foi possível carregar os cursos.';
@@ -61,7 +61,7 @@ const handleEnrollment = async (courseId) => {
   enrollmentStatus.value[courseId] = 'loading';
   try {
     // A store de autenticação já deve ter configurado o token globalmente
-    await axios.post(`http://localhost:3333/courses/${courseId}/enroll`);
+    await axios.post(`http://localhost:3000/courses/${courseId}/enroll`);
     enrollmentStatus.value[courseId] = 'success';
   } catch (err) {
     enrollmentStatus.value[courseId] = 'error';

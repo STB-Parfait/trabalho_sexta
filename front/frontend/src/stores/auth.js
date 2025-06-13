@@ -16,7 +16,7 @@ export const useAuthStore = defineStore('auth', {
   actions: {
     async login(credentials) {
       try {
-        const response = await axios.post('http://localhost:3333/login', credentials);
+        const response = await axios.post('http://localhost:3000/auth/login', credentials);
         const { token, user } = response.data;
 
         // Atualiza o estado da store
