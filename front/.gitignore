@@ -1,0 +1,65 @@
+# Arquivo .gitignore para um projeto Full Stack (Node.js + Vue.js)
+
+# Ignora dependências do Node.js em qualquer lugar do projeto
+# Isso cobre tanto o /backend/node_modules quanto o /frontend/node_modules
+**/node_modules
+
+# Arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===============================================================
+# ARQUIVOS ESPECÍFICOS DO BACKEND (Node.js)
+# ===============================================================
+
+# Arquivo de variáveis de ambiente. NUNCA envie senhas ou chaves para o Git.
+# Cada desenvolvedor deve ter seu próprio arquivo .env.
+backend/.env
+
+# Banco de dados local do SQLite. Ele é gerado automaticamente.
+backend/database.sqlite
+
+# Pasta de uploads temporários
+backend/tmp/uploads/
+
+# ===============================================================
+# ARQUIVOS ESPECÍFICOS DO FRONTEND (Vue / Vite)
+# ===============================================================
+
+# Pasta de build de produção
+frontend/dist
+frontend/.output
+
+# Arquivos de variáveis de ambiente locais
+frontend/.env.local
+frontend/.env.*.local
+
+# Arquivos de log e cache do Vite
+frontend/.vite-inspect/
+
+# ===============================================================
+# ARQUIVOS DE SISTEMA OPERACIONAL E IDES
+# ===============================================================
+
+# Arquivos de sistema do macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Arquivos de sistema do Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+# Pastas de configuração de IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

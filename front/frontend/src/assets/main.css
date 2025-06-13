@@ -1,0 +1,13 @@
+/* Importa os estilos de reset/normalização do seu projeto. */
+@import './base.css';
+
+/* Opcional: Você pode adicionar estilos globais aqui, mas evite
+  regras que definam a largura ou o posicionamento do #app.
+  Por exemplo, você pode definir variáveis de cor.
+*/
+:root {
+  --cor-primaria: #0056b3;
+  --cor-texto: #333;
+  --fundo-claro: #f8f9fa;
+  --fundo-branco: #fff;
+}
